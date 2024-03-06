@@ -1,0 +1,174 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+header {
+    background-color: #003366;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+header h1 {
+    margin-top: 15px;
+    font-size: 40px;
+    line-height: 10px;
+}
+header h3 {
+    margin: 0;
+    font-size: 12px;
+}
+
+.logo{
+    text-align: left;
+    margin-top: 5px;
+    margin-left: 20px;
+}
+.logo a{
+    color: #fff;
+    text-decoration: khaki;
+}
+.login {
+    display: inline-block;
+    align-items: right;
+}
+.login a {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #003366;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+.login a:hover {
+    background-color: #fff;
+    color: #003366;
+}
+
+header nav{
+    float: right;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+section {
+    padding: 50px 0;
+    text-align: center;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+h1, h2 {
+    color: #003366;
+}
+
+/* main */
+#home {
+    background-image: url('../imgs/home.jpg');
+}
+#home .main {
+    display: flex;
+    justify-content: space-between;
+    background-color: beige;
+    margin: 40px 40px 0 40px;
+    border: 1px solid #000; /* Adjust as needed */
+    padding: 20px; /* Adjust as needed */
+}
+#home .main .about{
+    width: 70%;
+    text-align: left;
+}
+#home .main img {
+    width: 50%; /* Adjust as needed */
+    object-fit: cover; /* This will ensure the image maintains its aspect ratio */
+}
+
+/* complaint in home page */
+#complaints {
+    background-image: url('../imgs/complaint-bg.jpeg');
+    color: #003366
+    padding: 20px;
+}
+#complaints .container{
+    max-width: 80%;
+    margin-top: 20px;
+    border: 5px solid #003366; /* Adjust as needed */
+    background-color: #00336668;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#complaints a {
+    color: #4c6aa9;
+    text-decoration: none;
+}
+
+#complaints a:hover {
+    text-decoration: underline;
+}
+
+/* contact in home page */
+#contact{
+    background-color: #bec1c4eb;
+    color: black;
+}
+#contact .container {
+    align-items: start;
+    text-align: start;
+    width: 35%;
+    float: left;
+    margin-left: 40px;
+}
+#contact .container ul{
+    list-style-type: none;
+    padding: 0;
+}
+#container .links{
+    align-items: start;
+    text-align: start;
+    width: 35%;
+    float: right;
+    margin-right: 40px;
+}
+#contact .links ul {
+    list-style-type: none;
+    padding: 0;
+}
+#contact .links ul li a {
+    color: black;
+    line-height: 2px;
+    text-decoration: none;
+}
+
+#contact .links ul li a:hover {
+    text-decoration: underline;
+}
+
+/* footer */
+footer {
+    background-color: #003366;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    bottom: 0;
+    width: 100%;
+}
+footer p {
+    margin: 0;
+    text-align: start;
+}

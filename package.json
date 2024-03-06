@@ -1,0 +1,14 @@
+{
+  "name": "govserve",
+  "version": "1.0.0",
+  "description": "GovServe is a web portal designed to streamline the complaint submission process for citizens and facilitate communication between citizens and local authorities. The platform allows citizens to submit complaints to local authorities, which are then tracked and resolved within a specified time frame. Additionally, local authorities can share updates, news, and surveys with citizens through the portal.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
