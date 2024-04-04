@@ -7,7 +7,7 @@ body {
 header {
     background-color: #003366;
     color: #fff;
-    padding: 10px;
+    padding: 20px;
     text-align: center;
 }
 header h1 {
@@ -50,6 +50,7 @@ header h3 {
 
 header nav{
     float: right;
+
 }
 nav ul {
     list-style-type: none;
