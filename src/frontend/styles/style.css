@@ -31,7 +31,6 @@ header h3 {
 }
 .login {
     display: inline-block;
-    align-items: right;
 }
 .login a {
     display: inline-block;
@@ -46,7 +45,7 @@ header h3 {
 .login a:hover {
     background-color: #fff;
     color: #003366;
-}
+} 
 
 header nav{
     float: right;

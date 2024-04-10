@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complaint Page</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .complaints ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .complaints ul li {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        strong {
+            font-weight: bold;
+        }
+        .category {
+            color: #007bff;
+        }
+        .content {
+            font-style: italic;
+        }
+        .working {
+            color: black;
+        }
+
+        .declined {
+            color: red;
+        }
+
+        .resolved {
+            color: green;
+        }
+
+    </style>
+<body>
+
+<!-- Header -->
+<header>
+    <h1>Track your complaint</h1>
+    <nav>
+        <ul>
+            <li><a href="Home">Home</a></li>
+            <li><a href="Complaint">Complaints</a></li>
+            <li><a href="#news">News & Updates</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <h1>User Complaints</h1>
+    <div class="complaints">
+        <% if (complaints.length > 0) { %>
+            <ul>
+                <% complaints.forEach(complaint => { %>
+                    <li>
+                        <strong>Complaint ID:</strong> <%= complaint.complaint_id %><br>
+                        <strong>Category:</strong> <%= complaint.category_name%><br>
+                        <strong>Content:</strong> <%= complaint.content %><br>
+                        <strong>Status:</strong> <span class="<%= complaint.complaint_status %>"><%= complaint.complaint_status %></span><br>
+                    </li>
+                <% }); %>
+            </ul>
+        <% } else { %>
+            <p>No complaints found.</p>
+        <% } %>
+    </div>
+</body>
+</html>

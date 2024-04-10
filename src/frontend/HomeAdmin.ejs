@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Home Page</title>
+    <style>
+            .complaint-item {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+            position: relative;
+        }
+        .complaint-item button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            padding: 5px 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .complaint-item button:hover {
+            background-color: #0056b3;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        h2 {
+            color: #555;
+            margin-bottom: 10px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            border-bottom: 1px solid #ccc;
+            padding: 10px 0;
+        }
+        strong {
+            color: #007bff;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome <%= adminName %>!</h1>
+        <h2>Complaints</h2>
+        <ul>
+            <% complaints.forEach(complaint => { %>
+                <div class="complaint-item">
+                    <li>
+                        <strong>Complaint ID:</strong> <%= complaint.complaint_id %><br>
+                        <strong>Content:</strong> <%= complaint.content %><br>
+                        <strong>Status:</strong> <%= complaint.complaint_status %><br>
+                        <button onclick="pickComplaint(<%= complaint.complaint_id %>)">Pick</button>
+                    </li>
+                </div>
+            <% }); %>
+        </ul>
+    </div>
+
+    <script>
+        function pickComplaint(complaintId) {
+            console.log("Picked complaint with ID: " + complaintId);
+        }
+    </script>
+</body>
+</html>

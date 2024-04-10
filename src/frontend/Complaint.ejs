@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complaint Page</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <h1>Track your complaint</h1>
+    <nav>
+        <ul>
+            <li><a href="Home">Home</a></li>
+            <li><a href="">Complaints</a></li>
+            <li><a href="#news">News & Updates</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Complaint Section -->
+<section>
+    <div class="container"><h2>Submit Complaint</h2>
+        <form id="complaintForm" action="http://localhost:3000/submit-complaint" method="POST">
+            <label for="category">Category:</label>
+            <select id="category" name="category" required>
+                <option value="">Select category</option>
+                <option value="1">Street light</option>
+                <option value="2">Water supply</option>
+                <option value="3">Road & sewage</option>
+                <option value="4">Waste collection</option>
+                <option value="5">Other</option>
+            </select><br><br>
+            <label for="content">Content:</label><br>
+            <textarea id="content" name="content" rows="4" cols="50" required></textarea><br><br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</section>
+
+<div style="text-align: center;">
+    <label>
+        See your activity:
+        <a href="Complaints"> Click Here...</a>
+    </label>
+</div>
+
+<!-- Quick Link to Home Page -->
+<p style="text-align: center;"><a href="Home">Back to Home</a></p>
+
+</body>
+</html>
