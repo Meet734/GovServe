@@ -11,6 +11,7 @@ header {
     text-align: center;
 }
 header h1 {
+    display: inline-block;
     margin-top: 15px;
     font-size: 40px;
     line-height: 10px;
@@ -24,6 +25,12 @@ header h3 {
     text-align: left;
     margin-top: 5px;
     margin-left: 20px;
+}
+.logo img {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    margin: 0 auto;
 }
 .logo a{
     color: #fff;
@@ -49,7 +56,6 @@ header h3 {
 
 header nav{
     float: right;
-
 }
 nav ul {
     list-style-type: none;

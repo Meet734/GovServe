@@ -53,7 +53,7 @@ router.get('/HomeAdmin', (req, res) => {
     const query = `
         SELECT complaint_id, user_id, content, complaint_status
         FROM complaints
-        WHERE category_id = ?
+        WHERE complaint_status = 'working' AND category_id = ?
     `;
     db.query(query, [workId], (err, results) => {
         if (err) {
@@ -64,6 +64,51 @@ router.get('/HomeAdmin', (req, res) => {
         res.render('HomeAdmin', { complaints: results, adminName: req.session.admin.name });
     });
 });
+
+router.get('/declineComplaint/:complaintId', (req, res) => {
+    const complaintId = req.params.complaintId;
+    
+    // Perform actions to decline the complaint with the given ID
+    db.query('UPDATE complaints SET complaint_status = ? WHERE complaint_id = ?', ['declined', complaintId], (err, result) => {
+        if (err) {
+            console.error('Error declining complaint:', err);
+            res.status(500).send('Error declining complaint');
+            return;
+        }
+
+        // Redirect back to the HomeAdmin page or any other desired page
+        res.redirect('/HomeAdmin');
+    });
+});
+
+router.get('/resolveComplaint/:complaintId', (req, res) => {
+    const complaintId = req.params.complaintId;
+    
+    // Perform actions to mark the complaint as resolved
+    db.query('UPDATE complaints SET complaint_status = ? WHERE complaint_id = ?', ['resolved', complaintId], (err, result) => {
+        if (err) {
+            console.error('Error resolving complaint:', err);
+            res.status(500).send('Error resolving complaint');
+            return;
+        }
+
+        // Redirect back to the HomeAdmin page or any other desired page
+        res.redirect('/HomeAdmin');
+    });
+});
+
+
+
+// app.post('/updateStatus', (req, res) => {
+//     // Extract data from the request body
+//     const { complaintId, status } = req.body;
+
+//     // Perform any necessary actions based on the complaint ID and status
+//     // For example, update the status of the complaint in the database
+
+//     // Send a response indicating success
+//     res.status(200).send('Status updated successfully');
+// });
 
 
 module.exports = router;

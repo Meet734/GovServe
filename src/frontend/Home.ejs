@@ -5,27 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GovServe</title>
     <link rel="stylesheet" type="text/css" href="styles/style.css">
-    <!-- Link to your CSS stylesheet -->
 </head>
 <body>
 
 <!-- Navigation Menu -->
 <header>
     <div class="logo">
+        <img src="imgs/GS.jpg" alt="GovServe Logo">
         <h1>
             <a href="Home">GovServe</a>
         </h1>
         <h3>Empowering Citizens, Connecting Communities</h3>
     </div>
-
-    <div class="login">
-        <% if (loggedIn) { %>
-            <a href="" class="login" id="logout-btn">Logout</a>
-        <% } else { %>
-            <a href="loginPage" class="login" id="login-btn">Login</a>
-        <% } %>
-    </div>
-    
     <nav>
         <ul>
             <li><a href="/Home">Home</a></li>
@@ -34,6 +25,13 @@
             <!-- Add more navigation links as needed -->
         </ul>
     </nav>
+    <div class="login">
+        <% if (loggedIn) { %>
+            <a href="" class="login" id="logout-btn">Logout</a>
+        <% } else { %>
+            <a href="loginPage" class="login" id="login-btn">Login</a>
+        <% } %>
+    </div>
 </header>
 
 <!-- Main Content Section -->
