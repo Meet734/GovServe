@@ -21,3 +21,18 @@ Make sure you have the following installed on your system:
 
    ```bash
    git clone https://github.com/your-username/govserve.git
+2. **Navigate to the project directory:**
+   ```bash
+   cd GovServe
+3. **Install dependencies:**
+   ```bash
+   npm install
+4. **Database Setup:**
+   Create a MySQL database named govserve.
+   Import the schema from database/govserve.sql into the govserve database.
+5. **Start the server:**
+   ```bash
+   cd src/backend
+   node server.js
+6. **Start the server:**
+   Open your web browser and navigate to http://localhost:3000 to access the GovServe application.
