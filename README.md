@@ -1,16 +1,23 @@
 # GovServe
 
-GovServe is a web portal designed to streamline the complaint submission process for citizens and facilitate communication between citizens and local authorities. The platform allows citizens to submit complaints to local authorities, which are then tracked and resolved within a specified time frame. Additionally, local authorities can share updates, news, and surveys with citizens through the portal.
+## Introduction
 
-## Features
+GovServe is a remote complaint management system that allows citizens to submit complaints online and enables administrators to track and resolve them efficiently.
 
-- **Complaint Submission**: Citizens can submit complaints regarding various issues to local authorities.
-- **Timely Resolution**: Complaints are assigned a timer for resolution, and if not resolved within the specified time, they are escalated to higher authorities.
-- **Authority Notifications**: Authorities receive notifications for new complaints and pending resolutions.
-- **News and Updates**: Local authorities can share important news and updates with citizens through the portal.
-- **Surveys**: Citizens can participate in surveys on various topics, allowing authorities to gather feedback and opinions.
+## Installation
 
-### Installation
+Follow these steps to set up and run the project locally:
 
-1. Clone the repository:
+### Prerequisites
 
+Make sure you have the following installed on your system:
+
+- Node.js and npm (Node Package Manager)
+- MySQL Server
+
+### Installation Steps
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/your-username/govserve.git
